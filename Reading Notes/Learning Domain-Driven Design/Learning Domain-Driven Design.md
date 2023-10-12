@@ -19,9 +19,10 @@ URL: https://www.oreilly.com/library/view/learning-domain-driven-design/97810981
 
 ## Analyzing Business Domains
 
+> [!IMPORTANT]
 > To design and build an effective solution, you have to understand the problem.
 To understand the problem, you have to understand the context within which it exists.
-> 
+
 - **Business Domain**: main area of activity
     - FedEx: courier delivery; Starbucks: coffee; Walmart: retail
 - **Subdomain**: fine-grained area of business activity
@@ -44,9 +45,10 @@ To understand the problem, you have to understand the context within which it ex
 
 ## Discovering Domain Knowledge
 
+> [!IMPORTANT]
 > A software project’s success depends on the effectiveness of knowledge sharing between domain experts and software engineers.
 Effective knowledge sharing between domain experts and software engineers requires effective communication.
-> 
+
 - Traditional software development lifecycle implies top-down *translations* (domain knowledge → analysis model → requirements → system design → source code)
 - Instead of translations, define a **Ubiquitous language** shared among all stakeholders
     - Language of the business
@@ -63,8 +65,9 @@ Effective knowledge sharing between domain experts and software engineers requi
 
 ## **Managing Domain Complexity**
 
+> [!IMPORTANT]
 > On an organizational scale, the domain experts’ mental models can be inconsistent themselves. Different domain experts can use different models of the same business domain.
-> 
+
 - Inconsistencies among domain experts
     - Not good:
         - Making a model fit everything → ineffective
@@ -76,8 +79,9 @@ Effective knowledge sharing between domain experts and software engineers requi
 
 ## **Integrating Bounded Contexts**
 
+> [!IMPORTANT]
 > Multiple bounded contexts may represent the same business entities but model them to solve a different problem. Although they can evolve independently, they have to integrate with one another. **Contracts** are touchpoints between bounded contexts, in particular regarding core subdomains.
-> 
+
 - Integration models
     - Cooperation
         - Partnership
@@ -159,29 +163,31 @@ Effective knowledge sharing between domain experts and software engineers requi
 
 ## **Design Heuristics**
 
+> [!IMPORTANT]
 > Refactoring logical boundaries is considerably less expensive than refactoring physical boundaries. When designing bounded contexts, start with wider boundaries. If required, decompose the wide boundaries into smaller ones as you gain domain knowledge.
-> 
+
 - Business Logic
 
-![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1003.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1003.png)
+  ![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1003.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1003.png)
 
 - Architecture
 
-![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1004.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1004.png)
+  ![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1004.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1004.png)
 
 - Testing
 
-![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1005.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1005.png)
+  ![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1005.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1005.png)
 
-![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1006.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1006.png)
+  ![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1006.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1006.png)
 
 ## **Evolving Design Decisions**
 
+> [!IMPORTANT]
 > As an organization grows and evolves, it’s not unusual for some of its subdomains to morph from one type to another.
-> 
-- Strategic
 
-![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1101.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1101.png)
+- Strategic
+  
+  ![https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1101.png](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781098100124/files/assets/lddd_1101.png)
 
 - Tactical
     - Refactorings/upgrades towards more complex patterns
@@ -189,8 +195,9 @@ Effective knowledge sharing between domain experts and software engineers requi
     - When splitting up teams, need to re-define integration contracts.
 - Domain Knowledge
 
+> [!IMPORTANT]
 > As time goes by, documentation often becomes stale, people who were working on the original design leave the company, and new functionality is added in an ad hoc manner until, at one point, the codebase gains the dubious status of a legacy system. **It’s vital to prevent such degradation of domain knowledge proactively.**
-> 
+
 - Heuristics
     - When a subdomain’s functionality is expanded, try to identify more finer-grained subdomain boundaries that will enable you to make better design decisions.
     - Don’t allow a bounded context to become a “jack of all trades.” Make sure the models encompassed by bounded contexts are focused to solve specific problems.
@@ -211,8 +218,8 @@ Effective knowledge sharing between domain experts and software engineers requi
     6. Policies: when commands are automatically executed when a specific domain event occurs. Purple sticky notes
     7. Read Models: the view of data within the domain that the actor uses to make a decision to execute a command. Green sticky notes.
     8. External Systems: Pink sticky notes.
-    9. Aggregates
-    10. Bounded Contexts
+    9. Aggregates: Draw a border around related events that would likely be handled by one class or module
+    10. Bounded Contexts: Draw a border around related aggregates that would likely be handled by one service or team
 
 ## In the real world
 

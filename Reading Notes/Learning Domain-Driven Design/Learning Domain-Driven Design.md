@@ -42,29 +42,6 @@ To understand the problem, you have to understand the context within which it ex
     - Business stakeholders
     - Not the engineers (but there can be overlap. E.g. ML team)
 
-<aside>
-🦸 **Exercise for Superb AI**
-
-- Domain analysis
-    - Business domain: ML data management
-    - Core subdomains
-        - Annotating labels
-        - Auto-Label
-        - Low-latency data handling
-        - Analytics
-        - Model insights and curation
-        - etc.
-    - Generic subdomains
-        - Auth (Cognito)
-        - Integrations (SDKs)
-        - Billing (Stripe)
-        - Feature Flags (Flagsmith)
-        - etc.
-    - Supporting subdomains
-        - Data import and export
-        - etc.
-</aside>
-
 ## Discovering Domain Knowledge
 
 > A software project’s success depends on the effectiveness of knowledge sharing between domain experts and software engineers.
